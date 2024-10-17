@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boulangerie Saint-Honoré</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="imgs/logo.svg" alt="Logo Boulangerie" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#products">Produits</a></li>
+          <li><a href="#order">Commander</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <h1 id="about">Boulangerie de la rue Saint-Honoré</h1>
+      <p>
+        Bienvenue à la Boulangerie Saint-Honoré, votre artisan de saveurs
+        authentiques ! Située au cœur de la ville, notre boulangerie allie
+        tradition et passion pour vous offrir chaque jour des pains
+        croustillants, des viennoiseries dorées à la perfection, ainsi que des
+        pâtisseries raffinées. Nous sélectionnons des ingrédients de qualité,
+        issus de producteurs locaux, pour garantir fraîcheur et goût à chaque
+        bouchée. Que ce soit pour un petit déjeuner gourmand, une pause douceur
+        ou une pièce montée exceptionnelle, la Boulangerie Saint-Honoré est
+        votre destination gourmande incontournable. Venez découvrir le vrai goût
+        de l'artisanat !
+      </p>
+
+      <!-- Produits -->
+      <section class="products" id="products">
+        <div class="product">
+          <img src="imgs/painchocolat.jpg" alt="Pain au chocolat" />
+          <p>Pain au chocolat - 0,45€</p>
+        </div>
+        <div class="product">
+          <img src="imgs/croissant.jpg" alt="Croissant" />
+          <p>Croissant - 0,40€</p>
+        </div>
+        <div class="product">
+          <img src="imgs/chausson.jpeg" alt="Chausson aux pommes" />
+          <p>Chausson aux pommes - 0,80€</p>
+        </div>
+        <div class="product">
+          <img src="imgs/PainAuxRaisins.jpg" alt="Chausson aux pommes" />
+          <p>Chausson aux pommes - 0,75€</p>
+        </div>
+        <div class="product">
+          <img src="imgs/crepe.jpeg" alt="Chausson aux pommes" />
+          <p>Chausson aux pommes - 1,00€</p>
+        </div>
+        <div class="product">
+          <img src="imgs/baguette.jpeg" alt="Chausson aux pommes" />
+          <p>Chausson aux pommes - 0,70€</p>
+        </div>
+      </section>
+
+      <!-- Formulaire de commande -->
+      <section class="order-section" id="order">
+        <h2>Commande</h2>
+        <form action="#">
+          <label for="produit">Produit:</label>
+          <input type="text" id="produit" name="produit" />
+          <label for="quantite">Quantité:</label>
+          <input type="number" id="quantite" name="quantite" />
+          <button type="submit">Commander</button>
+        </form>
+      </section>
+
+      <!-- Section de contact -->
+      <section class="contact-section" id="contact">
+        <h2>Nous contacter</h2>
+        <form action="#">
+          <label for="mail">Mail:</label>
+          <input type="email" id="mail" name="mail" />
+          <label for="message">Message:</label>
+          <textarea id="message" name="message"></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2024 - Boulangerie Saint-Honoré</p>
+    </footer>
+  </body>
+</html>
