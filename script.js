@@ -94,7 +94,30 @@ document.getElementById("ajouterPanierBtn").addEventListener("click", () => {
   }
 });
 
+// Fonction pour afficher une modale de confirmation d'envoi de message
+function envoyer() {
+  const modale = document.createElement("div");
+  modale.classList.add("modale");
+  modale.innerHTML = `
+      <div class="modale-contenu">
+        <h3>Message envoyé</h3>
+        <p>Merci pour votre sollicitation</p>
+        <button id="fermerModaleBtn">Fermer</button>
+      </div>
+    `;
+  document.body.appendChild(modale);
+
+  document.getElementById("fermerModaleBtn").addEventListener("click", () => {
+    modale.remove();
+  });
+}
+
 document.getElementById("commander").addEventListener("click", (e) => {
   e.preventDefault();
   commander();
+});
+
+document.getElementById("envoyer").addEventListener("click", (e) => {
+  e.preventDefault();
+  envoyer();
 });
