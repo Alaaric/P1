@@ -22,19 +22,21 @@
     </header>
 
     <main class="main-content">
-      <h1 id="about">Boulangerie de la rue Saint-Honoré</h1>
-      <p>
-        Bienvenue à la Boulangerie Saint-Honoré, votre artisan de saveurs
-        authentiques ! Située au cœur de la ville, notre boulangerie allie
-        tradition et passion pour vous offrir chaque jour des pains
-        croustillants, des viennoiseries dorées à la perfection, ainsi que des
-        pâtisseries raffinées. Nous sélectionnons des ingrédients de qualité,
-        issus de producteurs locaux, pour garantir fraîcheur et goût à chaque
-        bouchée. Que ce soit pour un petit déjeuner gourmand, une pause douceur
-        ou une pièce montée exceptionnelle, la Boulangerie Saint-Honoré est
-        votre destination gourmande incontournable. Venez découvrir le vrai goût
-        de l'artisanat !
-      </p>
+      <section class="intro">
+        <h1 id="about">Boulangerie de la rue Saint-Honoré</h1>
+        <p>
+          Bienvenue à la Boulangerie Saint-Honoré, votre artisan de saveurs
+          authentiques ! Située au cœur de la ville, notre boulangerie allie
+          tradition et passion pour vous offrir chaque jour des pains
+          croustillants, des viennoiseries dorées à la perfection, ainsi que des
+          pâtisseries raffinées. Nous sélectionnons des ingrédients de qualité,
+          issus de producteurs locaux, pour garantir fraîcheur et goût à chaque
+          bouchée. Que ce soit pour un petit déjeuner gourmand, une pause
+          douceur ou une pièce montée exceptionnelle, la Boulangerie
+          Saint-Honoré est votre destination gourmande incontournable. Venez
+          découvrir le vrai goût de l'artisanat !
+        </p>
+      </section>
 
       <!-- Produits -->
       <section class="products" id="products">
@@ -51,16 +53,16 @@
           <p>Chausson aux pommes - 0,80€</p>
         </div>
         <div class="product">
-          <img src="imgs/PainAuxRaisins.jpg" alt="Chausson aux pommes" />
-          <p>Chausson aux pommes - 0,75€</p>
+          <img src="imgs/PainAuxRaisins.jpg" alt="Pain aux raisins" />
+          <p>Pain aux raisins - 0,75€</p>
         </div>
         <div class="product">
-          <img src="imgs/crepe.jpeg" alt="Chausson aux pommes" />
-          <p>Chausson aux pommes - 1,00€</p>
+          <img src="imgs/crepe.jpeg" alt="Crêpe" />
+          <p>Crêpe - 1,00€</p>
         </div>
         <div class="product">
-          <img src="imgs/baguette.jpeg" alt="Chausson aux pommes" />
-          <p>Chausson aux pommes - 0,70€</p>
+          <img src="imgs/baguette.jpeg" alt="Baguette" />
+          <p>Baguette - 0,70€</p>
         </div>
       </section>
 
@@ -69,10 +71,32 @@
         <h2>Commande</h2>
         <form action="#">
           <label for="produit">Produit:</label>
-          <input type="text" id="produit" name="produit" />
+          <select name="produit" id="produit">
+            <option value="Pain au chocolat" class="produit-select">
+              Pain au chocolat
+            </option>
+            <option value="Croissant" class="produit-select">Croissant</option>
+            <option value="Chausson aux pommes" class="produit-select">
+              Chausson aux pommes
+            </option>
+            <option value="Pain aux raisins" class="produit-select">
+              Pain aux raisins
+            </option>
+            <option value="Crepe" class="produit-select">Crêpe</option>
+            <option value="Baguette" class="produit-select">Baguette</option>
+          </select>
+
           <label for="quantite">Quantité:</label>
-          <input type="number" id="quantite" name="quantite" />
-          <button type="submit">Commander</button>
+          <input type="number" id="quantite" name="quantite" min="1" />
+          <button type="button" id="ajouterPanierBtn">Ajouter au panier</button>
+
+          <div class="panier" id="panier">
+            <h3>Mon panier</h3>
+            <ul id="panierItems"></ul>
+            <div class="total" data-total="0">Total: 0.00€</div>
+          </div>
+
+          <button type="submit" id="commander">Commander</button>
         </form>
       </section>
 
@@ -93,5 +117,7 @@
     <footer>
       <p>© 2024 - Boulangerie Saint-Honoré</p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
