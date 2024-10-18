@@ -67,27 +67,46 @@
       </section>
 
       <!-- Formulaire de commande -->
+      <hr />
       <section class="order-section" id="order">
         <h2>Commande</h2>
-        <form action="#">
-          <label for="produit">Produit:</label>
-          <select name="produit" id="produit">
-            <option value="Pain au chocolat" class="produit-select">
-              Pain au chocolat
-            </option>
-            <option value="Croissant" class="produit-select">Croissant</option>
-            <option value="Chausson aux pommes" class="produit-select">
-              Chausson aux pommes
-            </option>
-            <option value="Pain aux raisins" class="produit-select">
-              Pain aux raisins
-            </option>
-            <option value="Crepe" class="produit-select">Crêpe</option>
-            <option value="Baguette" class="produit-select">Baguette</option>
-          </select>
+        <form action="#" class="order-form">
+          <div class="order-inputs">
+            <label for="produit"
+              >Produit:
 
-          <label for="quantite">Quantité:</label>
-          <input type="number" id="quantite" name="quantite" min="1" />
+              <select name="produit" id="produit">
+                <option value="Pain au chocolat" class="produit-select">
+                  Pain au chocolat
+                </option>
+                <option value="Croissant" class="produit-select">
+                  Croissant
+                </option>
+                <option value="Chausson aux pommes" class="produit-select">
+                  Chausson aux pommes
+                </option>
+                <option value="Pain aux raisins" class="produit-select">
+                  Pain aux raisins
+                </option>
+                <option value="Crepe" class="produit-select">Crêpe</option>
+                <option value="Baguette" class="produit-select">
+                  Baguette
+                </option>
+              </select>
+            </label>
+
+            <label for="quantite"
+              >Quantité:
+
+              <input
+                type="number"
+                id="quantite"
+                name="quantite"
+                min="1"
+                class="quantite-input"
+              />
+            </label>
+          </div>
           <button type="button" id="ajouterPanierBtn">Ajouter au panier</button>
 
           <div class="panier" id="panier">
@@ -103,11 +122,17 @@
       <!-- Section de contact -->
       <section class="contact-section" id="contact">
         <h2>Nous contacter</h2>
-        <form action="#">
-          <label for="mail">Mail:</label>
-          <input type="email" id="mail" name="mail" />
-          <label for="message">Message:</label>
-          <textarea id="message" name="message"></textarea>
+        <form action="#" class="contact-form">
+          <label for="mail"
+            >Mail:
+
+            <input type="email" id="mail" name="mail" />
+          </label>
+          <label for="message"
+            >Message:
+
+            <textarea id="message" name="message"></textarea>
+          </label>
           <button type="submit">Envoyer</button>
         </form>
       </section>
